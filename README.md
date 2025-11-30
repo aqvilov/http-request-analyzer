@@ -4,7 +4,7 @@ Go package for analyzing HTTP requests.
 
 ## Installation
 
-```bash
+```Write the next text in concole
 go get github.com/aqvilov/http-request-analyzer
 
 
@@ -36,3 +36,5 @@ func main() {
 ###
 
 An example of usage is shown in main.go
+
+Aqvilov.
