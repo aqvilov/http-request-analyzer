@@ -11,7 +11,6 @@ func test(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	// 1. Сначала объявляем ВСЕ маршруты
 	http.HandleFunc("/reg", test)
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
@@ -47,17 +46,9 @@ func main() {
 		} else {
 			fmt.Fprintf(w, `{"error": "method not allowed"}`)
 		}
-		analyzer.PrintRequest(r)
+		analyzer.PrintRequest(r) // юзаем функцию
 	})
 
-	// 2. Потом выводим информацию
-	fmt.Println("🚀 Сервер запущен на http://localhost:8081")
-	fmt.Println("📝 Тестовые endpoints:")
-	fmt.Println("   GET  http://localhost:8081/")
-	fmt.Println("   GET  http://localhost:8081/submit")
-	fmt.Println("   POST http://localhost:8081/submit")
-	fmt.Println("   POST http://localhost:8081/api/users")
-
-	// 3. И только в конце запускаем сервер
+	// только в конце запускаем сервер
 	http.ListenAndServe(":8081", nil)
 }
