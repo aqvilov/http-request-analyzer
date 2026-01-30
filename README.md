@@ -4,14 +4,16 @@ Go package for analyzing HTTP requests.
 
 ## Installation
 
-```Write the next text in concole ```
+Write the next text in concole 
+```
 go get github.com/aqvilov/http-request-analyzer
+```
 
 
 ## USAGE
-import "github.com/aqvilov/http-request-analyzer"
+```import "github.com/aqvilov/http-request-analyzer"```
 
-###SOURCE CODE IN `ANALYZER` DIRECTORY
+#### SOURCE CODE IN `ANALYZER` DIRECTORY
 
 
 ## What does the function output from the package:
@@ -28,17 +30,17 @@ import "github.com/aqvilov/http-request-analyzer"
 
 
 
-// Example usage
-
+### Example usage
+```
 func main() {
     // your code before ( with all handlefunc and added r *http.Request )
     analyzer.PrintRequest(r)
 }
+```
 
-
-###
 
 An example of usage is shown in example.go
 
 Aqvilov.
+
 
